@@ -23,6 +23,9 @@ namespace IAttendanceNft:
     func owner_of(token_id: Uint256) -> (owner: felt):
     end
 
+    func user_nft_id(owner: felt) -> (id: Uint256):
+    end
+
     func mint():
     end
 
@@ -30,5 +33,11 @@ namespace IAttendanceNft:
     end
 
     func unpause():
+    end
+
+    func ERC721_Metadata_tokenURI(token_id: Uint256) -> (token_uri_len: felt, token_uri: felt*):
+    end
+
+    func ERC721_Metadata_setTokenURI(token_uri_len: felt, token_uri: felt*):
     end
 end
