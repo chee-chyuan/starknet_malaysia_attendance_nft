@@ -34,6 +34,36 @@ end
 func user_nft(address: felt) -> (id: Uint256):
 end
 
+@view 
+func is_paused{
+        syscall_ptr: felt*, 
+        range_check_ptr, 
+        pedersen_ptr: HashBuiltin*
+        }() -> (is_paused:felt):
+        let (is_paused) = Pausable.is_paused()
+        return (is_paused)
+end
+
+@view 
+func owner{
+        syscall_ptr: felt*, 
+        range_check_ptr, 
+        pedersen_ptr: HashBuiltin*
+        }() -> (res: felt):
+        let (res) = Ownable.owner()
+        return (res)
+end
+
+@view
+func next_token_id{
+        syscall_ptr: felt*, 
+        range_check_ptr, 
+        pedersen_ptr: HashBuiltin*
+        }() -> (id: Uint256):
+        let (id) = current_id.read()
+        return (id)
+end
+
 @view
 func name{
         syscall_ptr: felt*, 
