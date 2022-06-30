@@ -131,11 +131,35 @@
     },
     {
         "inputs": [],
+        "name": "is_paused",
+        "outputs": [
+            {
+                "name": "is_paused",
+                "type": "felt"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
         "name": "owner",
         "outputs": [
             {
                 "name": "res",
                 "type": "felt"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "next_token_id",
+        "outputs": [
+            {
+                "name": "id",
+                "type": "Uint256"
             }
         ],
         "stateMutability": "view",
@@ -188,6 +212,23 @@
         "type": "function"
     },
     {
+        "inputs": [
+            {
+                "name": "owner",
+                "type": "felt"
+            }
+        ],
+        "name": "user_nft_id",
+        "outputs": [
+            {
+                "name": "id",
+                "type": "Uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
         "inputs": [],
         "name": "mint",
         "outputs": [],
@@ -202,6 +243,41 @@
     {
         "inputs": [],
         "name": "unpause",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "token_id",
+                "type": "Uint256"
+            }
+        ],
+        "name": "ERC721_Metadata_tokenURI",
+        "outputs": [
+            {
+                "name": "token_uri_len",
+                "type": "felt"
+            },
+            {
+                "name": "token_uri",
+                "type": "felt*"
+            }
+        ],
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "token_uri_len",
+                "type": "felt"
+            },
+            {
+                "name": "token_uri",
+                "type": "felt*"
+            }
+        ],
+        "name": "ERC721_Metadata_setTokenURI",
         "outputs": [],
         "type": "function"
     }

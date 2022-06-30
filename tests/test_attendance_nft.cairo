@@ -126,6 +126,9 @@ func test_mint_one_copy_only{syscall_ptr: felt*, range_check_ptr, pedersen_ptr: 
     let (next_token_id) = IAttendanceNft.next_token_id(contract_address=contract_address)
     assert next_token_id = Uint256(2,0)
 
+    let (user_nft_id) = IAttendanceNft.user_nft_id(contract_address=contract_address, owner=NFT_MINTER)
+    assert user_nft_id = Uint256(1,0)
+
     # only can mint once
     %{ expect_revert(error_message="User already has minted this NFT") %}
     IAttendanceNft.mint(contract_address=contract_address)
