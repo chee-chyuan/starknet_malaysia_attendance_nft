@@ -163,7 +163,7 @@ func unpause{
     return ()
 end
 
-@external
+@view
 func ERC721_Metadata_tokenURI{
             syscall_ptr: felt*,
             pedersen_ptr: HashBuiltin*,

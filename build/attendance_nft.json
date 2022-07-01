@@ -265,6 +265,7 @@
                     "type": "felt*"
                 }
             ],
+            "stateMutability": "view",
             "type": "function"
         },
         {
@@ -2963,7 +2964,7 @@
             },
             "__main__.ERC721_Metadata_tokenURI": {
                 "decorators": [
-                    "external"
+                    "view"
                 ],
                 "pc": 1369,
                 "type": "function"
@@ -7832,7 +7833,7 @@
             },
             "__wrappers__.ERC721_Metadata_tokenURI": {
                 "decorators": [
-                    "external"
+                    "view"
                 ],
                 "pc": 1418,
                 "type": "function"

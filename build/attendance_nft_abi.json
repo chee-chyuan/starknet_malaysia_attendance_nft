@@ -264,6 +264,7 @@
                 "type": "felt*"
             }
         ],
+        "stateMutability": "view",
         "type": "function"
     },
     {

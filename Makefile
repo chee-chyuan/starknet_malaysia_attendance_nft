@@ -1,0 +1,5 @@
+deploy_devnet:
+	protostar deploy ./build/attendance_nft.json --gateway-url http://localhost:5050 --inputs 0x537461726b6e6574204d616c6179736961 0x537461726b6e6574204d616c6179736961 0x00fF98a04b55c50eC97B3e5848Cec3E2a646B3d9A011d5E17c0FB387C747991D
+	
+deploy_goerli:
+	protostar deploy ./build/attendance_nft.json --network alpha-goerli --inputs 0x537461726b6e6574204d616c6179736961 0x537461726b6e6574204d616c6179736961 0x00fF98a04b55c50eC97B3e5848Cec3E2a646B3d9A011d5E17c0FB387C747991D
